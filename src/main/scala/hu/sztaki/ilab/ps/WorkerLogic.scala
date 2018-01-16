@@ -20,6 +20,11 @@ import scala.util.{Success, Try}
 trait WorkerLogic[T, P, WOut] extends Serializable {
 
   /**
+    * Method called when the process is started
+    */
+  def open(): Unit ={}
+
+  /**
     * Method called when new data arrives.
     *
     * @param data

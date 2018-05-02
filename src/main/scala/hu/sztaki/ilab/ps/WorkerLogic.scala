@@ -35,6 +35,11 @@ trait WorkerLogic[T, P, WOut] extends LooseWorkerLogic[T, P, P, WOut]
 trait LooseWorkerLogic[T, PullP, PushP, WOut] extends Serializable {
 
   /**
+    * Method called when the process is started
+    */
+  def open(): Unit ={}
+
+  /**
     * Method called when new data arrives.
     *
     * @param data
